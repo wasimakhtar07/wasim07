@@ -1,0 +1,57 @@
+/* login.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('p.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    background: transparent;
+}
+
+label {
+    display: block;
+    font-family: 'Times New Roman';
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius:none;
+   
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+   /* background: transparent;*/
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(169, 7, 7);
+}
+input:hover {
+    background-color: rgb(169, 7, 7);
+}

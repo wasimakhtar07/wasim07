@@ -1,0 +1,28 @@
+<body>
+    <table border="2">
+        <tr>
+            <th>teacher_id</th>
+            <th>fname</th>
+            <th>lname</th>
+            <th>dob</th>
+             <th> phone</th>
+              <th>mobile</th>
+            <th>status</th>
+             <th>address</th>
+        </tr>
+        {% for col in data %}
+        <tr>
+            <td>{{col[0]}}</td>
+            <td>{{col[1]}}</td>
+            <td>{{col[2]}}</td>
+            <td>{{col[3]}}</td>
+             <td>{{col[4]}}</td>
+            <td>{{col[5]}}</td>
+            <td>{{col[6]}}</td>
+            <td>{{col[7]}}</td>
+        </tr>
+        {% endfor %}
+        <input type=button value="Print" onclick="window.print()">
+    </body>
+</table>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("{{url_for('static',filename='15.jpg')}}");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+form {
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    background: transparent;
+}
+
+label {
+    display: block;
+    font-family: 'Times New Roman';
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius:none;
+    background: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(169, 7, 7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  </style>
+<body align="center">
+        
+     <form action="/submit" method="post">
+          <label for="uname">Username</label>&nbsp;
+          <input type="text" id="uname" name="t1"><br><br>
+
+          <label for="pass">Password</label>&nbsp;
+          <input type="text" id="pass" name="t2"><br><br>
+
+          <button type="submit" value="Login" name="b1">Login</button>
+     </form>
+     
+   <body align="center">
+        <table border="1">
+        <form name=f method="post" action="/submit">
+            {% for row in data %}
+            {% if(row[0]==t1) and row[1]==t2 %}
+            <script>
+                    window.open("http://127.0.0.1:5000/menu")
+            </script>
+            {%else%}
+            <script>
+                    alert("Invalid id or password")
+            </script>
+            {% endif %}
+            {% endfor %}
+        </form>
+     </body>
+    </body>
+    </html>

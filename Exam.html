@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+     background-color: #f0f8ff; 
+     font-family: 'Times New Roman'; 
+     background-image: url("{{url_for('static',filename='11.jpg')}}");
+    background-size: cover;
+    background-position: center;
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     height: 100vh;
+     margin: 0; 
+ }
+ 
+ form {
+     padding: 20px; 
+     border: 1px solid #ccc; 
+     border-radius: 10px; 
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+     background-color: #ffffff; 
+     background: transparent;
+ }
+ 
+ table {
+     width: 100%; 
+     border-collapse: collapse; 
+     border: none;
+     outline: none;
+ }
+ 
+ th, td {
+     padding: 10px; 
+     text-align: left; 
+     border-bottom: none;
+     outline: none;
+ }
+ 
+ th {
+     background-color: #4CAF50; 
+     color: white; 
+     background: transparent;
+     outline: none;
+     
+ }
+ 
+ td {
+     background-color: #f2f2f2; 
+ }
+ 
+ input[type="text"] {
+     width: 100%; 
+     padding: 8px; 
+     box-sizing: border-box; 
+     outline: none;
+     background: transparent;
+ }
+ 
+ button {
+     width: 100%;
+     padding: 10px;
+     background-color: #4CAF50;
+     color: black;
+     border: none;
+    background: transparent;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+ button:hover{
+     background-color: rgb(228, 13, 35);
+ }
+ </style>
+<body>
+    <form name="f" action="http://localhost:5005/submit" method="POST"> 
+        <table border="1" align="right">
+            <tr>
+                <th>Exam id</th>
+                <th><input type="text"  name="t1"></th>
+            </tr>
+            <tr>
+                <th>ExamType id</th>
+                <th><input type="text" name="t2"></th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th><input type="text"  name="t3"></th>
+            </tr> 
+            <tr>
+                <th>Start Date</th>
+                <th><input type="text" name="t4"></th>
+            </tr>
+               <tr>
+                 <th colspan="2">
+                    <input type="button" name="b1" value="New">
+                 <input type="submit" name="b1" value="Save">
+                 <input type="submit" name="b1" value="Delete">
+                 <input type="submit" name="b1" value="Update">
+                 <input type="submit" name="b1" value="AllSearch">
+                 <input type="submit" name="b1" value="Psearch">
+                </th>
+               </tr>
+        </table> 
+    </form>           
+</body>
+</html>

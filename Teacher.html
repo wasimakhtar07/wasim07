@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+     background-color: #f0f8ff; 
+     font-family: 'Times New Roman';
+     background-image: url("{{url_for('static',filename='4.jpg')}}");
+    background-size: cover;
+    background-position: center; 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     height: 100vh;
+     margin: 0; 
+ }
+ 
+ form {
+     padding: 20px; 
+     border: 1px solid #ccc; 
+     border-radius: 10px; 
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+     background-color: #ffffff; 
+ }
+ 
+ table {
+     width: 100%; 
+     border-collapse: collapse; 
+ }
+ 
+ th, td {
+     padding: 10px; 
+     text-align: left; 
+     border-bottom: 1px solid #ddd; 
+ }
+ 
+ th {
+     background-color: #4CAF50; 
+     color: white; 
+ }
+ 
+ td {
+     background-color: #f2f2f2; 
+ }
+ 
+ input[type="text"] {
+     width: 100%; 
+     padding: 8px; 
+     box-sizing: border-box; 
+     outline: none;
+     background: transparent;
+ }
+ 
+ button {
+     width: 100%;
+     padding: 10px;
+     background-color: #4CAF50;
+     color: black;
+     border: none;
+    background: transparent;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+ button:hover{
+     background-color: rgb(228, 13, 35);
+ }
+ </style>
+<body bgcolor=#D3D3D3>
+    <form name="f" action="http://localhost:5011/submit" method="POST"> 
+        <table border="1" align="center">
+            <tr>
+                <th bgcolor="eerr33">Teacher id</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t1"></th>
+            </tr>
+            <tr>
+                <th bgcolor="eerr33">FName</th>
+                <th bgcolor="rr44bb"><input type="text" name="t2"></th>
+            </tr>
+            <tr>
+                <th bgcolor="eerr33">Lname</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t3"></th>
+            </tr> 
+            <tr>
+                <th bgcolor="eerr33"> Dob</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t4"></th>
+            </tr> 
+            <tr>
+                <th bgcolor="eerr33">Phone</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t5"></th>
+            </tr> 
+            <tr>
+                <th bgcolor="eerr33"> Mobaile</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t6"></th>
+            </tr> 
+            <tr>
+                <th bgcolor="eerr33"> Status</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t7"></th>
+            </tr> 
+            <tr>
+                <th bgcolor="eerr33">Address</th>
+                <th bgcolor="rr44bb"><input type="text"  name="t8"></th>
+            </tr> 
+               <tr>
+                 <th colspan="2">
+                 <input type="reset" name="b1" value="New" bgcolor="rf45y4">
+                 <input type="submit" name="b1" value="Save">
+                 <input type="submit" name="b1" value="Delete">
+                 <input type="submit" name="b1" value="Update">
+                 <input type="submit" name="b1" value="AllSearch">
+                 <input type="submit" name="b1" value="Psearch">
+                 <select name="s">
+                    <option value="Teacher id ">serial number
+                      <option value="Fname">Name
+                      <option value="Lname">Lname
+                      <option value="Dob">Dob
+                      <option value="Phone">Phone
+                      <option value="Mobile">Mobile
+                      <option value="Status">status
+                      <option value="Address ">number of adult
+                      </select>
+                      <input type="text" name="tspsrc">
+                      <button type=submit value="SpecialSearch"name=b1>Special Search</button>
+                </th>
+               </tr>
+        </table> 
+    </form>           
+</body>
+</html>
