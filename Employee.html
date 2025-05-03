@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head
+<body>
+    <form action="/submit" method="post" name="f">
+        <table border="1" align="center">
+            <tr>
+                <th>Employee ID</th>
+                <th><input type="text"  name="t1"></th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th><input type="text" name="t2"></th>
+            </tr>
+            <tr>
+                <th>Salary</th>
+                <th><input type="text"  name="t3"></th>
+            </tr> 
+            <tr>
+                <th>New Salary</th>
+                <th><input type="text" name="t4"></th>
+            </tr>
+               <tr>
+                 <th colspan="2">
+                    <input type="reset" name="b1" value="New">
+                    <input type="button" name="b1" value="Calculat" onclick="a()">
+                 <input type="submit" name="b1" value="Save">
+                 <input type="submit" name="b1" value="AllSearch">
+                </th>
+               </tr>
+        </table> 
+</body>
+ <script>
+    function a()
+    {
+         x=parseInt(f.t3.value);
+         z=x+x*.10;
+        f.t4.value=z;
+    }
+ </script>
+</html>

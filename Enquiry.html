@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENQUIRY FORM</title>
+    <link rel="stylesheet" href="Enquiry.css">
+</head>
+<style>
+    body {
+    background-color: #f0f8ff; 
+    font-family: 'Times New Roman'; 
+    background-image: url("{{url_for('static',filename='p.jpg')}}");
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0; 
+}
+</style>
+<body align="center">
+    
+    
+    <form action="/submit" method="POST" name="f">
+        <table align="center" border="1" cellpadding="7" cellspacing="0.5" BGCOLOR="#E5E4E2">
+            <caption><h2>GET IT PROJECT PVT. LTD.</h2></caption>
+            <tr>
+                <th>Sl No.</th>
+                <th><input type="text" name="t1"></th>
+            </tr>
+            <tr>
+                <th>NAME</th>
+                <th><input type="text" name="t2"></th>
+            </tr>
+            <tr>
+                <th>D.O.B</th>
+                   <th><input type="Date" name="t3"></th>
+            </tr>
+            <tr>
+                <th>GENDER</th>
+                <th>
+                    <select name="t4">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>FATHER'S NAME</th>
+                <th><input type="text" name="t5"></th>
+            </tr>
+            <tr>
+               <th>CORRESPONDENCE ADDRESS</th>
+               <th><input type="text" name="t6"></th>
+            </tr>
+            <tr>
+                <th>CONTACT NO.</th>
+                <th><input type="text" name="t7"></th>
+            </tr>
+            <tr>
+                <th>EMAIL ID</th>
+                <th><input type="text" name="t8"></th>
+            </tr>
+            <tr>
+                <th>EDUCATION QUALIFICATION</th>
+                <th><input type="text" name="t9"></th>
+            </tr>
+            <tr>
+                <th>SCHOOL/COLLEGE</th>
+                <th><input type="text" name="t10"></t>
+            </tr>
+            <tr>
+                <th>COURSE INTERESTED IN</th>
+                <th><input type="text" name="t11"></th>
+            </tr>
+            <tr>
+                <th>DATE</th>
+                <th><input type="date" name="t12"></th>
+            </tr>
+            <tr>
+                <th><input type="text" name="t13"> <br><br>
+                  COUNSELED BY </th>
+                <th><input type="file" name="t14" accept="image/*"><br>
+                <br>
+                <br>
+                SIGNATURE OF STUDENT
+                </th>
+            </tr>
+     <tr>
+        <th colspan="2">
+            <input type="reset" name="b1" value="New">
+         <input type="submit" name="b1" value="Save">
+         <input type="submit" name="b1" value="Allsearch">
+         <input type="submit" name="b1" value="Psearch">
+        </th>
+    </tr>
+        </table>
+    </form>
+</body>
+</html>
